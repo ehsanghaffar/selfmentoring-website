@@ -112,7 +112,6 @@ function hideLevel(level) {
     }
     var elements = document.getElementsByClassName(level);
     [].forEach.call(elements, function(element) {
-        console.log("el", element)
         hideElement(element)
     })
 }
@@ -146,14 +145,12 @@ function hideElement(element) {
 }
 
 function showElement(element) {
-    console.log("showElement", element)
     if (element) {
         element.style.display = "block";
     }
 }
 
 function showLevelElement(element) {
-    console.log("showElement", element)
     if (element) {
         element.style.display = "flex";
     }
