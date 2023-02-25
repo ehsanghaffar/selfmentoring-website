@@ -5,7 +5,7 @@
 <head>
     <meta charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="scripts.js" type="text/javascript"></script>
+    <script src="scripts.js" type="text/javascript" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" rel="stylesheet"
@@ -16,34 +16,53 @@
 <body>
     <div class="main">
         <header class="text-gray-600 bg-gray-100 body-font border-b">
-            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 border-l-2 w-40">
-                    <span class="ml-3 text-xl text-indigo-600 underline decoration-4 decoration-pink-500">
-                        SelfMentoring
-                    </span>
-                </a>
-                <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                    <a href="index.html" class="mr-10 hover:text-gray-900">
-                        <span class="item selected active">مسائل فنی</span>
-                    </a>
-                    <a href="communication.html" class="mr-10 hover:text-gray-900">
-                        <span class="item">ارتباط، بازخورد، همکاری و جامعه</span>
-                    </a>
-                    <a href="leadership.html" class="mr-10 hover:text-gray-900">
-                        <span class="item">
-                            رهبری
+            <nav class="
+              flex flex-wrap
+              items-center
+              justify-between
+              w-full
+              py-4
+              md:py-0
+              px-4
+              text-lg text-gray-700
+              bg-white
+            ">
+                <div>
+                    <a href="#">
+                        <span class="ml-3 text-xl text-indigo-600 underline decoration-4 decoration-pink-500">
+                            SelfMentoring
                         </span>
                     </a>
-                    <a href="delivery.html" class="mr-10 hover:text-gray-900">
-                        <span class="item">
-                            تحویل و اثربخشی
-                        </span>
-                    </a>
-                    <a href="strategy.html" class="mr-10 hover:text-gray-900">
-                        <span class="item">استراتژی</span>
-                    </a>
-                </nav>
-            </div>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="h-6 w-6 cursor-pointer md:hidden block"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+
+                <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+                    <ul class="
+                  pt-4
+                  text-base text-gray-700
+                  md:flex
+                  md:justify-between 
+                  md:pt-0">
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-purple-400" href="#">مسائل فنی</a>
+                        </li>
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-purple-400" href="#">ارتباط، بازخورد، همکاری و
+                                جامعه</a>
+                        </li>
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-purple-400" href="#">تحویل و اثربخشی</a>
+                        </li>
+                        <li>
+                            <a class="md:p-4 py-2 block hover:text-purple-400" href="#">استراتژی</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </header>
         <!--header-->
         <div class="container px-5 py-10 mx-auto">
@@ -570,21 +589,27 @@
                                     <li>
                                         <span class="bg-indigo-50 rounded p-1"> امنیت (security)</span>
                                         <p class="my-1">
-                                            اهمیتِ امنیت را درک می‌کند. از این دانش برای درخواستِ کمک در تصمیم‌گیری‌هایی که ممکن است پیامدهای امنیتی داشته باشد، استفاده می‌کند.
+                                            اهمیتِ امنیت را درک می‌کند. از این دانش برای درخواستِ کمک در تصمیم‌گیری‌هایی
+                                            که ممکن است پیامدهای امنیتی داشته باشد، استفاده می‌کند.
                                         </p>
                                     </li>
                                     <li>
                                         <span class="bg-indigo-50 rounded p-1">سیستم‌های توزیع‌شده (distributed
                                             systems)</span>
                                         <p class="my-1">
-                                        می‌فهمد که اپلیکیشن‌ها در زمینه‌ی خودشان چگونه با یکدیگر ادغام (integrate) می‌شوند. درکِ عمیق‌تری از بخش‌های تکنولوژی‌های استفاده‌شده کسب می‌کند. کسبِ درکِ تکنولوژی‌های متفاوتِ موردنیاز در بخش‌هایی از tech stack. به عنوان مثال ثبات داده (data consistency)، async task و دسترس‌پذیری (availability) اپلیکیشن‌ها.
+                                            می‌فهمد که اپلیکیشن‌ها در زمینه‌ی خودشان چگونه با یکدیگر ادغام (integrate)
+                                            می‌شوند. درکِ عمیق‌تری از بخش‌های تکنولوژی‌های استفاده‌شده کسب می‌کند. کسبِ
+                                            درکِ تکنولوژی‌های متفاوتِ موردنیاز در بخش‌هایی از tech stack. به عنوان مثال
+                                            ثبات داده (data consistency)، async task و دسترس‌پذیری (availability)
+                                            اپلیکیشن‌ها.
                                         </p>
                                     </li>
                                     <li>
                                         <span class="bg-indigo-50 rounded p-1">مشاهده‌پذیری (observability) و قابل
                                             اطمینان‌سازی (Reliability)</span>
                                         <p class="my-1">
-                                            از فلسفه‌ی مانیتورینگ سازمان، توسعه‌ی مهارتِ استفاده از ابزارهای مانیتورینگ و متریک‌های (metrics) مربوط به حوزه‌ی تیم خود آگاه است.
+                                            از فلسفه‌ی مانیتورینگ سازمان، توسعه‌ی مهارتِ استفاده از ابزارهای مانیتورینگ
+                                            و متریک‌های (metrics) مربوط به حوزه‌ی تیم خود آگاه است.
                                         </p>
                                     </li>
                                 </ul>
@@ -597,7 +622,8 @@
                                     <li>
                                         <span class="bg-indigo-50 rounded p-1"> اشکال‌زدایی (debugging)</span>
                                         <p>
-                                            از یک رویکرد سیستماتیک برای اشکال‌یابیِ مسائل موجود در یک سرویسِ واحد استفاده می‌کند.
+                                            از یک رویکرد سیستماتیک برای اشکال‌یابیِ مسائل موجود در یک سرویسِ واحد
+                                            استفاده می‌کند.
                                         </p>
                                     </li>
                                     <li>
@@ -605,7 +631,10 @@
                                             واکنش به حادثه (incident)
                                         </span>
                                         <p>
-                                            از طیف وسیعی از ابزارها برای تشخیصِ زمان وقوع حادثه استفاده می‌کند و حادثه را به موقع به ذی‌نفعان (stakeholders) اطلاع می‌دهد. مالکیتِ حوادثی که در حوزه خودشان قرار می‌گیرد را می‌پذیرد. ممکن است در حل یک حادثه نقش داشته باشد.
+                                            از طیف وسیعی از ابزارها برای تشخیصِ زمان وقوع حادثه استفاده می‌کند و حادثه
+                                            را به موقع به ذی‌نفعان (stakeholders) اطلاع می‌دهد. مالکیتِ حوادثی که در
+                                            حوزه خودشان قرار می‌گیرد را می‌پذیرد. ممکن است در حل یک حادثه نقش داشته
+                                            باشد.
                                         </p>
                                     </li>
                                 </ul>
@@ -627,8 +656,14 @@
                                             طراحی API
                                         </span>
                                         <p>
-                                            درکِ واسط‌های مختلف API و فرمت‌های آن‌ها و همچنین ساخت APIها بمنظور استفاده‌ی دیگران.
-                                            درکِ به‌روش‌ها برای طراحیِ APIها و همچنین تلاش برای عمیق‌تر کردن این دانش. این دانش شامل مواردی همچون اندازه‌ی پاسخ‌ها (response size)، امنیت، مدیریت خطا (error handling)، محدود کردن نرخ استفاده (rate limiting)، عملکرد (performance) و بِه‌روش‌های REST و GraphQL (مثلا صفحه‌بندی یا pagination، cache کردن و batch کردن، احرازهویت، فیلترها و طراحی رابط). این مسئله می‌تواند با کمک دیگران باشد.
+                                            درکِ واسط‌های مختلف API و فرمت‌های آن‌ها و همچنین ساخت APIها بمنظور
+                                            استفاده‌ی دیگران.
+                                            درکِ به‌روش‌ها برای طراحیِ APIها و همچنین تلاش برای عمیق‌تر کردن این دانش.
+                                            این دانش شامل مواردی همچون اندازه‌ی پاسخ‌ها (response size)، امنیت، مدیریت
+                                            خطا (error handling)، محدود کردن نرخ استفاده (rate limiting)، عملکرد
+                                            (performance) و بِه‌روش‌های REST و GraphQL (مثلا صفحه‌بندی یا pagination،
+                                            cache کردن و batch کردن، احرازهویت، فیلترها و طراحی رابط). این مسئله
+                                            می‌تواند با کمک دیگران باشد.
                                         </p>
                                     </li>
                                     <li>
@@ -637,7 +672,10 @@
                                             patterns)
                                         </span>
                                         <p>
-                                            به چگونگیِ اعمال الگوهای مناسب در کُدهای موجود توجه می‌کند و آن‌ها را درک می‌کند. به عنوان مثال، الگوی pub-sub یا الگوی circuit breaker را می‌شناسد و برای انجام وظایف خود، می‌تواند از آن‌ها برای سناریوهای مختلف استفاده کند. ممکن است از دیگران کمک بخواهد که کدام الگو را باید اعمال کند.
+                                            به چگونگیِ اعمال الگوهای مناسب در کُدهای موجود توجه می‌کند و آن‌ها را درک
+                                            می‌کند. به عنوان مثال، الگوی pub-sub یا الگوی circuit breaker را می‌شناسد و
+                                            برای انجام وظایف خود، می‌تواند از آن‌ها برای سناریوهای مختلف استفاده کند.
+                                            ممکن است از دیگران کمک بخواهد که کدام الگو را باید اعمال کند.
                                         </p>
                                     </li>
                                     <li>
@@ -661,9 +699,13 @@
                                             بازنگری کُد (code review)
                                         </span>
                                         <p>
-                                            PRهایی (pull request) با اندازه‌ی معقول ایجاد می‌کند که شاملِ شرح توضیحات، تست‌های انجام شده و تاثیرات دیپلوی است.
-PRها را با ذره‌بینِ کیفیت و ارزش بازنگری می‌کند، یعنی کیفیت کد (code quality)، معیارهای پذیرش (acceptance criteria)، منطقِ کسب‌وکار (business logic)، پوشش تست (test coverage) و هم‌راستا با معماری.
-همواره نظراتی سازنده و محترمانه در PRها ارائه می‌دهد. در حل‌وفصل مسائل مربوط به PRهای خودش فعال است و PRهای دیگران را هم بازنگری می‌کند.
+                                            PRهایی (pull request) با اندازه‌ی معقول ایجاد می‌کند که شاملِ شرح توضیحات،
+                                            تست‌های انجام شده و تاثیرات دیپلوی است.
+                                            PRها را با ذره‌بینِ کیفیت و ارزش بازنگری می‌کند، یعنی کیفیت کد (code
+                                            quality)، معیارهای پذیرش (acceptance criteria)، منطقِ کسب‌وکار (business
+                                            logic)، پوشش تست (test coverage) و هم‌راستا با معماری.
+                                            همواره نظراتی سازنده و محترمانه در PRها ارائه می‌دهد. در حل‌وفصل مسائل مربوط
+                                            به PRهای خودش فعال است و PRهای دیگران را هم بازنگری می‌کند.
                                         </p>
                                     </li>
                                     <li>
@@ -671,7 +713,10 @@ PRها را با ذره‌بینِ کیفیت و ارزش بازنگری می‌
                                             کاربر محور (user centric)
                                         </span>
                                         <p>
-                                            تلاش می‌کند که ویژگی‌ها (features) را با دغدغه‌ی کاربرانِ نهایی (end-users) ارائه دهد (deliver)، با این دیدگاه که یک epic قرار است چه ارزشی برای کاربرانِ نهایی به ارمغان بیاورد. برای سهولتِ استفاده‌ی کاربران نهایی از سیستم تلاش می‌کند (چه داخلی، چه خارجی و حتا خود توسعه‌دهندگان).
+                                            تلاش می‌کند که ویژگی‌ها (features) را با دغدغه‌ی کاربرانِ نهایی (end-users)
+                                            ارائه دهد (deliver)، با این دیدگاه که یک epic قرار است چه ارزشی برای
+                                            کاربرانِ نهایی به ارمغان بیاورد. برای سهولتِ استفاده‌ی کاربران نهایی از
+                                            سیستم تلاش می‌کند (چه داخلی، چه خارجی و حتا خود توسعه‌دهندگان).
                                         </p>
                                     </li>
                                     <li>
@@ -679,7 +724,10 @@ PRها را با ذره‌بینِ کیفیت و ارزش بازنگری می‌
                                             تست کردن (testing)
                                         </span>
                                         <p>
-                                            هرم تست کردن (testing pyramid) را درک می‌کند و در کنار نوشتن unit test تست‌های سطح بالاتر هم می‌نویسد. همیشه تست‌هایی برای مدیریت edge caseها می‌نویسد و خطاها (errors) را همچون رخدادهای مرسوم (happy paths)، باظرافت (gracefully) مدیریت می‌کند.
+                                            هرم تست کردن (testing pyramid) را درک می‌کند و در کنار نوشتن unit test
+                                            تست‌های سطح بالاتر هم می‌نویسد. همیشه تست‌هایی برای مدیریت edge caseها
+                                            می‌نویسد و خطاها (errors) را همچون رخدادهای مرسوم (happy paths)، باظرافت
+                                            (gracefully) مدیریت می‌کند.
                                         </p>
                                     </li>
                                     <li>
@@ -687,7 +735,9 @@ PRها را با ذره‌بینِ کیفیت و ارزش بازنگری می‌
                                             بِه‌روش (best practice)
                                         </span>
                                         <p>
-                                            کسبِ درکی از استانداردهایی که باید رعایت شود، و غالب‌ اوقات از بِه‌روش‌ها در کار استفاده می‌کند. بدنبال راهنماهای مرجع (references guides) و استانداردهای شناخته شده و همچنین کمکِ دیگران است.
+                                            کسبِ درکی از استانداردهایی که باید رعایت شود، و غالب‌ اوقات از بِه‌روش‌ها در
+                                            کار استفاده می‌کند. بدنبال راهنماهای مرجع (references guides) و استانداردهای
+                                            شناخته شده و همچنین کمکِ دیگران است.
                                         </p>
                                     </li>
                                 </ul>
@@ -704,7 +754,9 @@ PRها را با ذره‌بینِ کیفیت و ارزش بازنگری می‌
                                             (algorithms)
                                         </span>
                                         <p>
-                                            ساختمان داده‌های مختلف را می‌شناسد و می‌داند که چه زمانی از کدام یک از آن‌ها استفاده کند. درکی کلی از برخی از الگوریتم‌های استفاده شده و همچنین پیچیدگی زمانی مربوط به آن‌ها دارد.
+                                            ساختمان داده‌های مختلف را می‌شناسد و می‌داند که چه زمانی از کدام یک از آن‌ها
+                                            استفاده کند. درکی کلی از برخی از الگوریتم‌های استفاده شده و همچنین پیچیدگی
+                                            زمانی مربوط به آن‌ها دارد.
                                         </p>
                                     </li>
                                     <li>
@@ -712,7 +764,9 @@ PRها را با ذره‌بینِ کیفیت و ارزش بازنگری می‌
                                             کُد زدن
                                         </span>
                                         <p>
-                                            همواره توابعی (functions) را می‌نویسد که قابل تست (testable) هستند، توسط توسعه‌دهندگان (developers) دیگر براحتی قابل درک است و همچنین خطاها و موارد خاص (edge cases) را درنظر می‌گیرد.
+                                            همواره توابعی (functions) را می‌نویسد که قابل تست (testable) هستند، توسط
+                                            توسعه‌دهندگان (developers) دیگر براحتی قابل درک است و همچنین خطاها و موارد
+                                            خاص (edge cases) را درنظر می‌گیرد.
                                         </p>
                                     </li>
                                     <li>
@@ -720,7 +774,10 @@ PRها را با ذره‌بینِ کیفیت و ارزش بازنگری می‌
                                             خبرگیِ فنی
                                         </span>
                                         <p>
-                                            مفاهیمِ اصلی تکنولوژی‌های استفاده شده را می‌داند و دانش‌اش را در سایر زمینه‌های یک تخصصِ انتخاب شده گسترش می‌دهد. قادر است که تغییرات را برمبنای پیکربندی‌ ارائه دهد و درک‌اش را در یکسری فریمورک منتخب (chosen frameworks) عمیق می‌کند.
+                                            مفاهیمِ اصلی تکنولوژی‌های استفاده شده را می‌داند و دانش‌اش را در سایر
+                                            زمینه‌های یک تخصصِ انتخاب شده گسترش می‌دهد. قادر است که تغییرات را برمبنای
+                                            پیکربندی‌ ارائه دهد و درک‌اش را در یکسری فریمورک منتخب (chosen frameworks)
+                                            عمیق می‌کند.
                                         </p>
                                     </li>
                                 </ul>
@@ -971,7 +1028,7 @@ PRها را با ذره‌بینِ کیفیت و ارزش بازنگری می‌
                     <div class="teamlead flex items-center border" style="height: 480px;">
                         <div class="left flex flex-col col border-l-4">
                             <span class="title bg-indigo-500 p-1 rounded text-white">
-                                رهبر توسعه 
+                                رهبر توسعه
                             </span>
                             <div>
 
