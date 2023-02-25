@@ -94,6 +94,37 @@ function show(skill) {
             showElement(element);
         });
     }
+    console.log("elements", elements)
+}
+
+function changeLevel(selected) {
+    levels.forEach(function(level) {
+        // console.log(level)
+        hideLevel(level)
+    });
+    showLevel(selected)
+}
+
+function hideLevel(level) {
+    var levelEl = document.getElementById(level + "-level-header");
+    if (levelEl) {
+        levelEl.classList.remove("bg-indigo-200")
+    }
+    var elements = document.getElementsByClassName(level);
+    [].forEach.call(elements, function(element) {
+        console.log("el", element)
+        hideElement(element)
+    })
+}
+function showLevel(level) {
+    var levelEl = document.getElementById(level + "-level-header");
+    if (levelEl) {
+        levelEl.classList.add("bg-indigo-200")
+    }
+    var elements = document.getElementsByClassName(level);
+    [].forEach.call(elements, function(element) {
+        showLevelElement(element)
+    })
 }
 
 function hideExamples(level) {
@@ -115,7 +146,15 @@ function hideElement(element) {
 }
 
 function showElement(element) {
+    console.log("showElement", element)
     if (element) {
         element.style.display = "block";
+    }
+}
+
+function showLevelElement(element) {
+    console.log("showElement", element)
+    if (element) {
+        element.style.display = "flex";
     }
 }
